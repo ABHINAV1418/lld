@@ -67,7 +67,8 @@ int main() {
     Student* s2 = new Student("Bob", 102);
 
     University u("IIT Bombay", "Mumbai");
-
+    s1->setAddress("Delhi"); // This will NOT reflect in University's student list because s1 was copied
+    // but if we do Student s1("Alice", 101); then This will NOT reflect in University's student list because s1 was copied
     u.admitStudent(s1);
     u.admitStudent(s2);
 
