@@ -178,8 +178,11 @@ int main() {
     Channel * channel1 = user1->createChannel("abhinav's vlog");
     channel1->printCurrentSubscribers();
     user2->subscribeToAChannel(channel1);
-    // user1->postVideo("diwali vlog");
+    user1->postVideo("diwali vlog");
     user2->userUnsubscribeToAChannel(channel1);
+    delete channel1;
+    delete user1;
+    delete user2;
     // Channel* channel1 = new Channel("vlogging", user1);
     // Video* video1 = new Video("diwali vlog", user1,channel1);
     // user2->getAllVideosOfAChannel(channel1, "vlogging");
